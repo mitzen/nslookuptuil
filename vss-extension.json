@@ -1,7 +1,7 @@
 {
     "manifestVersion": 1,
     "id": "jerwoonslookuputilbuildtask",
-    "name": "jerwoo network diagnostic utility",
+    "name": "network diagnostic utility",
     "version": "0.0.1",
     "publisher": "jerwoo",
     "targets": [

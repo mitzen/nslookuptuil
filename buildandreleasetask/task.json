@@ -12,14 +12,14 @@
         "Minor": 0,
         "Patch": 0
     },
-    "instanceNameFormat": "Echo $(samplestring)",
+    "instanceNameFormat": "Echo $(servers)",
     "inputs": [
         {
             "name": "servers",
             "type": "string",
             "label": "servers to reach out to with nslookup util",
-            "defaultValue": "",
-            "required": true,
+            "defaultValue": "www.google.com",
+            "required": false,
             "helpMarkDown": "Utility to test network connectivity between this server and target servers. It also performs proxy"
         }
     ],
@@ -28,4 +28,4 @@
             "target": "index.js"
         }
     }
-    }
+}
