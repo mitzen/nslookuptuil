@@ -1,0 +1,31 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
+    "id": "fe79ed53-97f0-4a3c-b444-dca62e821909",
+    "name": "jerwoonslookuputilbuildtask",
+    "friendlyName": "jerwoo nslookup extension",
+    "description": "Network diagnostic utility",
+    "helpMarkDown": "",
+    "category": "Utility",
+    "author": "jerwoo",
+    "version": {
+        "Major": 1,
+        "Minor": 0,
+        "Patch": 0
+    },
+    "instanceNameFormat": "Echo $(samplestring)",
+    "inputs": [
+        {
+            "name": "servers",
+            "type": "string",
+            "label": "servers to reach out to with nslookup util",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "Utility to test network connectivity between this server and target servers. It also performs proxy"
+        }
+    ],
+    "execution": {
+        "Node": {
+            "target": "index.js"
+        }
+    }
+    }
