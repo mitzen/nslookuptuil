@@ -21,8 +21,6 @@ async function executeNsLookupProxyEnvSetToEmpty(result: string[]) {
 }
 
 async function executeNsLookup(result: string[]) {
-    
-    
     for (var server of result)
     {
         console.log(`Running nslookup on ${server}`);
