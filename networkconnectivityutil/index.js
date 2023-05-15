@@ -10,26 +10,18 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const tl = require("azure-pipelines-task-lib/task");
-const { exec } = require('child_process');
+const nslookup_1 = require("./nslookup");
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             const servers = tl.getInput('servers', true);
             if (servers == 'bad') {
-                tl.setResult(tl.TaskResult.Failed, 'Bad input was given');
+                tl.setResult(tl.TaskResult.Failed, 'Server names must be provided.');
                 return;
             }
-            console.log('Hello', servers);
-            console.log("performing nslookup.");
-            exec('nslookup -debug www.google.com', (err, stdout, stderr) => {
-                if (err) {
-                    // node couldn't execute the command
-                    return;
-                }
-                // the *entire* stdout and stderr (buffered)
-                console.log(`stdout: ${stdout}`);
-                console.log(`stderr: ${stderr}`);
-            });
+            if (servers != null)
+                yield (0, nslookup_1.execute)(servers);
+            console.log('done');
         }
         catch (err) {
             tl.setResult(tl.TaskResult.Failed, err.message);

@@ -1,7 +1,7 @@
 {
     "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
     "id": "fe79ed53-97f0-4a3c-b444-dca62e821909",
-    "name": "jerwoonslookuputilbuildtask",
+    "name": "jerwooutilitybundle",
     "friendlyName": "jerwoo nslookup extension",
     "description": "Network diagnostic utility",
     "helpMarkDown": "",

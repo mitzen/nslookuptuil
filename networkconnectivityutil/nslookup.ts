@@ -31,7 +31,6 @@ async function executeNsLookup(result: string[]) {
         console.log(`Running nslookup on ${server}`);
         console.log(`-------------------------------------------------------`);
         let cmdToExecute = `nslookup ${server}`;
-
         console.log(cmdToExecute);        
         dns.resolveAny(`${server}`, (err: any, result: any) =>
         console.log(result));
