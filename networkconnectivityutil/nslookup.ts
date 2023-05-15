@@ -29,9 +29,6 @@ async function executeNsLookup(result: string[]) {
         try {
             
             let result = await resolveDns(server);
-            // return (async function() { 
-            //     dns.resolveAny(`${server}`, (err: any, result: any) => console.log(result));
-            // })();
             await setTimeout(500);
 
             console.log(result);
@@ -40,19 +37,7 @@ async function executeNsLookup(result: string[]) {
         } catch (error: any) {
             console.log(error);
         }
-        
     }
-    
-    // result.forEach(server => {       
-    //     console.log(`Running nslookup on ${server}`);
-    //     console.log(`-------------------------------------------------------`);
-    
-    //     resolveDns(server);
-    //     // return (async function() { 
-    //     //     dns.resolveAny(`${server}`, (err: any, result: any) => console.log(result));
-    //     // })();
-    //     console.log(`-------------------------------------------------------`);
-    // });
 }
 
 async function resolveDns(server: string) { 
