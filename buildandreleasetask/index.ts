@@ -16,6 +16,7 @@ async function run() {
         console.log('done')
     }
     catch (err: any) {
+        
         tl.setResult(tl.TaskResult.Failed, err.message);
     }
 }
