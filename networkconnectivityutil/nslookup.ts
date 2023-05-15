@@ -1,4 +1,5 @@
 import dns from 'dns';
+import { setTimeout } from 'timers/promises';
 
 export async function execute(servers: string)
 {
@@ -33,6 +34,8 @@ async function executeNsLookup(result: string[]) {
             // return (async function() { 
             //     dns.resolveAny(`${server}`, (err: any, result: any) => console.log(result));
             // })();
+            await setTimeout(500);
+
             console.log(result);
             console.log(`-------------------------------------------------------`);
             
